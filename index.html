@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Competitive Analysis — Astrocade | UX &amp; Strategy Teardown</title>
-<meta name="description" content="A UX, product and strategy teardown of Astrocade — the AI 'wish-to-game' platform — analysed for the Weekend / Crucible TV-gaming thesis." />
+<title>Foundry — Competitive Analysis</title>
+<meta name="description" content="Competitive analyses of AI game-generation platforms, prepared for the Foundry game-generation platform." />
 <meta name="author" content="Paper Lee" />
-<meta property="og:title" content="Competitive Analysis — Astrocade" />
-<meta property="og:description" content="AI 'wish-to-game' platform — UX, product & strategy teardown for a TV-first, voice-first, local-multiplayer platform." />
+<meta property="og:title" content="Foundry — Competitive Analysis" />
+<meta property="og:description" content="UX, product & strategy teardowns of AI game-generation platforms, for the Foundry game-generation platform." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,27 +15,14 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<a class="skip-link" href="#company">Skip to content</a>
+<a class="skip-link" href="#analyses">Skip to content</a>
 
-<header class="topbar" id="top">
+<header class="topbar">
   <div class="topbar__inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="./">
       <span class="brand__star" aria-hidden="true">✦</span>
-      <span class="brand__text">Astrocade <em>· Comp Analysis</em></span>
+      <span class="brand__text">Foundry <em>· Comp Analysis</em></span>
     </a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#company">Company</a>
-      <a href="#gameplay">Gameplay</a>
-      <a href="#toolkit">Toolkit</a>
-      <a href="#agentic">Agentic AI</a>
-      <a href="#social">Social</a>
-      <a href="#business">Business</a>
-      <a href="#swot">SWOT</a>
-      <a href="#user-stories">User stories</a>
-      <a href="#implications">Implications</a>
-    </nav>
-    <a class="cta" href="https://www.figma.com/board/QFfTuIiUQlZmPU6tD0SqIo/Comp-Analysis" target="_blank" rel="noopener">Open FigJam ↗</a>
-    <button class="navtoggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </div>
 </header>
 
@@ -43,363 +30,58 @@
 <section class="hero">
   <div class="wrap">
     <p class="eyebrow">Competitive analysis · UX · product · strategy</p>
-    <h1>Competitive Analysis<span class="hero__dash">—</span><span class="hero__name">Astrocade</span></h1>
-    <p class="hero__lead">The AI <strong>“wish-to-game”</strong> platform, taken apart and read through the lens of the
-      <strong>Weekend / Crucible</strong> thesis: TV-first, voice-first, local-multiplayer game nights.</p>
+    <h1>Competitive Analysis<span class="hero__dash">—</span><span class="hero__name">Foundry</span></h1>
+    <p class="hero__lead">UX, product &amp; strategy teardowns of the AI game-generation platforms in our space,
+      read through the lens of <strong>Foundry</strong> — our game-generation platform. Pick a competitor below.</p>
     <ul class="meta-chips">
       <li>Prepared by Paper Lee</li>
-      <li>June 2026</li>
-      <li>Source: astrocade.com + a live signed-in Studio walkthrough</li>
+      <li>Updated June 2026</li>
+      <li>1 live · more coming</li>
     </ul>
-
-    <div class="kpis">
-      <div class="kpi"><span class="kpi__num">5M</span><span class="kpi__lab">Monthly active users<br>(~8 months post-launch)</span></div>
-      <div class="kpi"><span class="kpi__num">140M</span><span class="kpi__lab">Game plays per month</span></div>
-      <div class="kpi"><span class="kpi__num">75K+</span><span class="kpi__lab">Games created by users</span></div>
-      <div class="kpi"><span class="kpi__num">80</span><span class="kpi__lab">Countries with creators</span></div>
-      <div class="kpi"><span class="kpi__num">$56M</span><span class="kpi__lab">Raised — Sea (A) + Sequoia (B)</span></div>
-    </div>
-
-    <div class="tldr">
-      <h2>Snapshot — what Astrocade is</h2>
-      <p>Astrocade is a generative-AI “wish-to-game” platform: you describe an idea in a chat, an AI host
-        (“Astra”) proposes a named concept, then a team of AI agents builds a playable, shareable casual game
-        in ~10 minutes — no code, no art skills. It pairs this with a genre-organised, TikTok/Instagram-style
-        feed where games are discovered, played and remixed, backed by a real creator back-office
-        (My&nbsp;Games, Analytics, Comments). Critically for us, it is <strong>phone-first and solo-async-social:
-        no TV mode, no couch / local multiplayer, no voice</strong> — exactly the space the Weekend / Crucible
-        thesis targets.</p>
-    </div>
   </div>
 </section>
 
+<!-- ANALYSES -->
 <main>
-
-<!-- 1 · COMPANY -->
-<section id="company" class="section">
+<section id="analyses" class="section">
   <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">01</span>
-      <h2>Company, Market &amp; Funding</h2>
-      <p class="section__lede">Who is behind Astrocade, how much they have raised, and who they think the customer really is.</p>
-    </header>
-    <div class="cards cards--4">
-      <article class="card">
-        <h3>Founders &amp; team</h3>
-        <p>Brothers Amir Sadeghian (CEO, Stanford PhD, founding AI director at unicorn Aibee) and Ali Sadeghian (CTO, ex-Google Research). Stanford’s Fei-Fei Li is co-founder &amp; AI strategist. The team blends frontier-AI researchers with game-industry veterans — not traditional game studios.</p>
-      </article>
-      <article class="card">
-        <h3>Funding &amp; investors</h3>
-        <p>$56M across Series A (led by Sea / Forrest Li) and Series B (led by Sequoia Capital). Strategic money from Google, Nvidia, LG Ventures, Dentsu Ventures. Angels include Eric Schmidt, John Riccitiello (ex-EA &amp; Unity CEO), Tencent’s Martin Lau and Jerry Yang.</p>
-      </article>
-      <article class="card">
-        <h3>Traction</h3>
-        <p>~5M monthly active users and ~140M game plays per month within ~8 months of launch. 75K+ games created across 80 countries. Growth is the headline metric investors are buying.</p>
-      </article>
-      <article class="card">
-        <h3>Positioning &amp; market</h3>
-        <p>Tagline “Everyone has a game in them.” It explicitly competes with Instagram / TikTok for attention, <strong>not</strong> with Roblox. Surprise core segment: women 20–40, not teen boys. Framed as casual entertainment plus a YouTube-style creator economy.</p>
-      </article>
-    </div>
+    <ul class="tiles">
+
+      <li>
+        <a class="tile" href="astrocade/">
+          <span class="tile__badge tile__badge--live">Live</span>
+          <span class="tile__logo" aria-hidden="true">
+            <span class="tile__mark tile__mark--astrocade">✦</span>
+          </span>
+          <span class="tile__name">Astrocade</span>
+          <span class="tile__desc">The AI “wish-to-game” platform — phone-first, solo-async-social. Company, gameplay, toolkit, agentic pipeline, business model &amp; SWOT.</span>
+          <span class="tile__go">View analysis →</span>
+        </a>
+      </li>
+
+      <li>
+        <div class="tile tile--soon" aria-disabled="true">
+          <span class="tile__badge tile__badge--soon">Coming soon</span>
+          <span class="tile__logo" aria-hidden="true">
+            <span class="tile__mark tile__mark--tesana">T</span>
+          </span>
+          <span class="tile__name">Tesana</span>
+          <span class="tile__desc">Teardown in progress. Check back soon.</span>
+          <span class="tile__go tile__go--muted">In progress</span>
+        </div>
+      </li>
+
+    </ul>
   </div>
 </section>
-
-<!-- 2 · GAMEPLAY -->
-<section id="gameplay" class="section section--alt">
-  <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">02</span>
-      <h2>Gameplay Platform</h2>
-      <p class="section__lede">The games themselves and how people actually play them.</p>
-    </header>
-    <div class="cards cards--4">
-      <article class="card"><h3>Game types</h3><p>Casual, bite-size 2D / 2.5D mini-games: endless runners, arcade, racing, puzzle, quiz, simple shooters and storytelling games. Fun but shallow and short-session by design — not immersive 3D worlds or long-form titles.</p></article>
-      <article class="card"><h3>How it’s played</h3><p>Plays instantly in the browser and in iOS / Android apps. Portrait, one-hand, touch-first. No console / TV target, no gamepad support, no local couch co-op.</p></article>
-      <article class="card"><h3>Discovery feed</h3><p>The signed-in home is a genre-organised gallery — rails like Players’ Choice, Trending and Recommended For You, plus Platformer, Rhythm, Chess, Horror and Educational. Each tile shows play count + creator handle.</p></article>
-      <article class="card"><h3>Session &amp; retention loop</h3><p>Built as an attention product (“a fun way to spend time”). Loop: play → like / follow → remix → create. Founders even cite a wellbeing KPI: “When someone leaves Astrocade, are they happy?”</p></article>
-    </div>
-    <div class="figs figs--2">
-      <figure class="fig"><img src="assets/img/landing.png" alt="Astrocade marketing landing page" loading="lazy" /><figcaption>The marketing landing — “Create games with AI, instantly” over a carousel of community-made games.</figcaption></figure>
-      <figure class="fig"><img src="assets/img/gallery.png" alt="Astrocade signed-in game gallery feed" loading="lazy" /><figcaption>The real discovery surface: a genre-organised gallery of portrait, phone-first tiles with play counts and creator handles.</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- 3 · TOOLKIT -->
-<section id="toolkit" class="section">
-  <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">03</span>
-      <h2>Game-Creation Toolkit &amp; Tools UX</h2>
-      <p class="section__lede">The creator-facing tooling: going from blank page to a published game — captured live in the signed-in Studio.</p>
-    </header>
-    <div class="cards cards--4">
-      <article class="card"><h3>Entry: “Tap to wish”</h3><p>The Studio opens on a single prompt — “What game would you like to create?” — one multiline box plus an “Inspire Me” idea generator. Zero-config and chat-like. Left rail: Create, Earn, Game Jam, Learn, Opportunities, Community.</p></article>
-      <article class="card"><h3>Per-game custom edit mode</h3><p>Each game gets its own “Game Settings” panel generated for <em>its</em> mechanics. For our racing game that meant Players, Race Length, Asteroid Density, Power-up Frequency and Boost Drain Rate sliders, with Simple / Advanced modes — plus a model picker (“Fast Model”).</p></article>
-      <article class="card"><h3>Iterate by chat</h3><p>Creation is a chat. After you wish, Astra proposes a named concept (title, pitch, features) to accept or refine. Post-build you keep describing changes in plain language and the agents re-generate art, UI, mechanics and sound. Remixing is a first-class start.</p></article>
-      <article class="card"><h3>Docs = “Astropedia”</h3><p>Learning lives in a lightweight Notion guide (“Astropedia”: Visual Guide, Tips &amp; Tricks, Performance) plus YouTube tutorials and an “Astro Academy” bootcamp. Official docs are thin — a known weakness.</p></article>
-    </div>
-
-    <div class="figs figs--2">
-      <figure class="fig"><img src="assets/img/studio-entry.png" alt="Astrocade Studio entry screen" loading="lazy" /><figcaption>Studio entry: one “Tap to wish…” box + an “Inspire Me” generator.</figcaption></figure>
-      <figure class="fig"><img src="assets/img/learn.png" alt="Astropedia learn hub" loading="lazy" /><figcaption>“Astropedia” — the Learn hub is a lightweight embedded Notion guide.</figcaption></figure>
-    </div>
-
-    <h3 class="subhead">Beyond creation — a real creator back-office</h3>
-    <div class="figs figs--2">
-      <figure class="fig"><img src="assets/img/my-games.png" alt="My Games dashboard" loading="lazy" /><figcaption>My Games — Total / Published on Feed / In Review / Drafts. Games move Draft → In Review (moderation) → Published.</figcaption></figure>
-      <figure class="fig"><img src="assets/img/analytics.png" alt="Creator analytics dashboard" loading="lazy" /><figcaption>Analytics — Total &amp; “Significant” plays, median / P75 play duration, 7- &amp; 30-day ranges, and a top-games leaderboard.</figcaption></figure>
-    </div>
-
-    <h3 class="subhead">The finished editor — a custom edit mode generated for <em>this</em> game</h3>
-    <figure class="fig fig--hero">
-      <img src="assets/img/editor.png" alt="Astrocade in-editor view with live preview and auto-generated game settings" loading="lazy" />
-      <figcaption>Left: chat where Astra delivers the game and suggests edits in plain language. Centre: a live portrait phone preview (Start Race / Replay). Right: auto-generated Game Settings sliders that map directly to this game’s mechanics — not a generic editor.</figcaption>
-    </figure>
-
-    <div class="callouts callouts--2">
-      <aside class="callout callout--dev">
-        <p class="callout__kick">◆ Developer favourite — live in-editor preview</p>
-        <h4>Edit on the go</h4>
-        <ul>
-          <li>The game runs <strong>right inside the editor</strong> (centre pane) — beside the chat and the settings.</li>
-          <li>Edit → see it instantly: no separate build, export or device step. The change-and-check loop is seconds, not minutes.</li>
-          <li>“On-the-go” iteration: nudge a slider or re-prompt, replay in the same screen, repeat.</li>
-          <li class="callout__weekend">For Weekend / Crucible → keep a live preview, but make it the TV view with phones as controllers, so creators playtest the real couch experience while editing.</li>
-        </ul>
-      </aside>
-      <aside class="callout callout--key">
-        <p class="callout__kick">★ Key feature — auto-generated game settings</p>
-        <h4>Why this is a big deal for game designers</h4>
-        <ul>
-          <li>It auto-detects the <strong>right tuning knobs for that specific mechanic</strong> and exposes them as live sliders.</li>
-          <li>Balancing &amp; tuning is the slow, skilled heart of game design — this hands non-coders a no-code balancing surface.</li>
-          <li>Sliders are an instant tweak-and-playtest loop, versus the ~10-minute regenerate loop.</li>
-          <li>Net effect: each generated game becomes a <strong>parametric system</strong>, separating one-time generation from ongoing tuning.</li>
-          <li class="callout__weekend">For Weekend / Crucible → borrow “auto-derived tuning knobs”, but make them voice-adjustable and tweakable live on the TV during game night.</li>
-        </ul>
-      </aside>
-    </div>
-
-    <h3 class="subhead">Game info is editable any time — reframe the pitch after launch</h3>
-    <div class="split">
-      <figure class="fig"><img src="assets/img/edit-info.png" alt="Edit Game Info dialog" loading="lazy" /><figcaption>From the game-title dropdown → “Edit Game Info”: editable Title (≤50 chars) and Description / pitch (≤200 chars) with a thumbnail, plus an Allow-Remixing toggle and Delete Game.</figcaption></figure>
-      <aside class="callout callout--info">
-        <p class="callout__kick">◆ Creator tip — editable metadata</p>
-        <h4>Editable game info = reframe your pitch any time</h4>
-        <ul>
-          <li>Title and the description / pitch stay editable long after creation — change the hook <strong>without rebuilding or regenerating</strong> the game.</li>
-          <li>Decouples positioning from the build: iterate the “store listing” like an app-store entry to lift feed click-through.</li>
-          <li>Pairs with Analytics: spot an underperformer → rewrite the title / pitch → recover plays.</li>
-          <li class="callout__weekend">For Weekend / Crucible → treat each game’s pitch as living metadata creators can revise (even by voice), so discoverability keeps improving post-launch.</li>
-        </ul>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- 4 · AGENTIC -->
-<section id="agentic" class="section section--alt">
-  <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">04</span>
-      <h2>Agentic AI Creation UX</h2>
-      <p class="section__lede">Astrocade’s signature: not one model but a team of specialised AI agents. This is the real “wish → playable game” pipeline.</p>
-    </header>
-
-    <ol class="flow">
-      <li class="flow__step"><span class="flow__n">1</span><h4>Wish</h4><p>Type an idea, tap “Inspire Me”, or attach a reference image.</p></li>
-      <li class="flow__step"><span class="flow__n">2</span><h4>Concept proposal</h4><p>Astra replies with a <strong>named</strong> concept — title, pitch &amp; feature bullets. Refine by chat, or hit “Create”.</p></li>
-      <li class="flow__step flow__step--accent"><span class="flow__n">3</span><h4>Agents build in parallel</h4><p>Visual · UI · Gameplay · Audio generate the assets &amp; code together.</p></li>
-      <li class="flow__step"><span class="flow__n">4</span><h4>“Granting your wish” (~10 min)</h4><p>A live countdown + “while you wait” cards, then the editor opens.</p></li>
-      <li class="flow__step"><span class="flow__n">5</span><h4>Edit, publish, play</h4><p>Game Settings + chat tweaks → Publish → review → genre feed; earn &amp; remix.</p></li>
-    </ol>
-
-    <div class="cards cards--4">
-      <article class="card card--agent"><h3>Visual agent</h3><p>Generates art, animation, sprites and visual effects — the entire look of the game — from your description.</p></article>
-      <article class="card card--agent"><h3>UI agent</h3><p>Designs the in-game interface, HUD and controls so the generated game is actually playable and intuitive.</p></article>
-      <article class="card card--agent"><h3>Gameplay agent</h3><p>Builds and tunes the mechanics, rules, difficulty curve and overall “game feel”.</p></article>
-      <article class="card card--agent"><h3>Audio + “Astra” orchestrator</h3><p>Music and SFX are auto-generated; the mascot “Astra” drives AI brainstorming and coordinates the agent team.</p></article>
-    </div>
-
-    <div class="figs figs--2">
-      <figure class="fig"><img src="assets/img/concept.png" alt="Astra concept proposal step" loading="lazy" /><figcaption>Step 2 — Astra proposes a named concept (“Astro-Racers”) with a pitch and feature bullets; you refine by chat or hit Create.</figcaption></figure>
-      <figure class="fig"><img src="assets/img/generating.png" alt="Granting your wish generation screen" loading="lazy" /><figcaption>Step 4 — “Granting your wish”: a ~10-minute countdown with “while you wait” cards while agents build.</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- 5 · SOCIAL -->
-<section id="social" class="section">
-  <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">05</span>
-      <h2>Social Factors</h2>
-      <p class="section__lede">Community, identity and the loops that make creation social.</p>
-    </header>
-    <div class="cards cards--4">
-      <article class="card"><h3>Creator profiles</h3><p>Profiles act as creator portfolios with followers and a body of work. Identity is creator-first — closer to YouTube / TikTok creators than to gamer gamertags.</p></article>
-      <article class="card"><h3>Remix culture</h3><p>Any game can be a remix seed. Building on others’ games is encouraged as the default on-ramp, compounding content and giving newcomers a fast start.</p></article>
-      <article class="card"><h3>Community is off-platform</h3><p>The “Community” link points to Discord, not an in-app social graph. Discord is where feedback, tips and creator support actually happen.</p></article>
-      <article class="card"><h3>Events: Game Jams</h3><p>Bi-weekly Game Jams (run on itch.io) with prizes, featured spotlights and cross-channel promotion. Events drive a creation cadence and surface breakout creators.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- 6 · BUSINESS -->
-<section id="business" class="section section--alt">
-  <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">06</span>
-      <h2>Business Model &amp; Creator Economy</h2>
-      <p class="section__lede">How the platform and its creators make money.</p>
-    </header>
-    <div class="cards cards--4">
-      <article class="card"><h3>How creators earn</h3><p>Performance-based payouts tied to plays (YouTube-style), not a flat rev-share. “Last year creators earned $50K+”, and top creators reportedly make “thousands a month.”</p></article>
-      <article class="card"><h3>Qualification gate</h3><p>To unlock monetization: 100K significant plays (cited as 100K in 30 days) AND 3+ published games. A clear, gamified threshold that doubles as a retention and quality bar.</p></article>
-      <article class="card"><h3>$10M creator fund</h3><p>Astrocade is putting $10M into creator funds to seed payouts and attract talent early — a land-grab for creators before competitors scale.</p></article>
-      <article class="card"><h3>Platform monetization</h3><p>Revenue via ads, in-app-purchase splits and subscriptions, taking a cut of creator earnings. Big caveat: every prompt fires large GPU / compute spend — high marginal cost is the core business risk.</p></article>
-    </div>
-    <div class="figs figs--2">
-      <figure class="fig"><img src="assets/img/earn.png" alt="Earn on Astrocade page" loading="lazy" /><figcaption>Earn page: monetization gate = 100K plays + 3 published games, plus Game Jam / Discord / Astro Academy growth paths.</figcaption></figure>
-      <figure class="fig"><img src="assets/img/creators.png" alt="Astrocade for creators page" loading="lazy" /><figcaption>Creators page: “Make games. Build an audience. Earn money.” — note the portrait, phone-first game frames.</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- 7 · SWOT -->
-<section id="swot" class="section">
-  <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">07</span>
-      <h2>Strengths &amp; Weaknesses</h2>
-      <p class="section__lede">What Astrocade does genuinely well, and where it is exposed.</p>
-    </header>
-    <div class="swot">
-      <div class="swot__col swot__col--pos">
-        <h3>Strengths</h3>
-        <ul>
-          <li>Fastest path from idea to a playable game — minutes, no code or art skills</li>
-          <li>Built-in distribution: a discovery feed + ~5M MAU means instant audience</li>
-          <li>Agentic, per-game adaptive editor lowers the skill ceiling dramatically</li>
-          <li>Strong creator-economy hooks: $10M fund, bi-weekly jams, real payouts</li>
-          <li>Elite team &amp; capital — Sequoia, Google, Nvidia, Fei-Fei Li</li>
-          <li>Remix + “Inspire Me” defeat the blank-page problem</li>
-        </ul>
-      </div>
-      <div class="swot__col swot__col--neg">
-        <h3>Weaknesses</h3>
-        <ul>
-          <li>Platform lock-in: no export to the App Store, Steam or the open web</li>
-          <li>AI output is unpredictable; quality swings with the prompt</li>
-          <li>Games are shallow and short-session; no 3D or long-form depth</li>
-          <li>~10-minute generation wait per game — real latency &amp; compute cost</li>
-          <li>Thin official docs; learning leans on YouTube and Discord</li>
-          <li>Phone-only: no TV, no couch co-op, no voice interaction</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8 · USER STORIES -->
-<section id="user-stories" class="section section--alt">
-  <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">08</span>
-      <h2>User Stories &amp; Jobs-to-be-Done</h2>
-      <p class="section__lede">Read backwards from the features we actually used — the stories Astrocade’s tooling is built to fulfil, by persona.</p>
-    </header>
-
-    <div class="banner banner--northstar">
-      <p class="callout__kick">★ North-star job-to-be-done</p>
-      <h3>Turn an idea into a playable game in one sitting</h3>
-      <p>“As someone with a game idea but no coding or art skills, I want to turn that idea into a real, playable, shareable game in one sitting — so that I can be a ‘game creator’ without becoming a developer.” The deeper job: <strong>collapse the consumer → creator gap so the audience itself becomes the content engine.</strong></p>
-    </div>
-
-    <div class="cards cards--5">
-      <article class="card card--persona"><h3>1 · Aspiring creator <span>(non-coder)</span></h3><ul>
-        <li>As a non-technical creator, I want to describe a game in plain language and get something playable, so creating needs a sentence — not code.</li>
-        <li>As someone with blank-page anxiety, I want a named concept proposed first, so I can refine rather than start from nothing.</li>
-        <li>As an impatient first-timer, I want reassurance while it builds, so a ~10-min wait doesn’t make me quit.</li>
-      </ul></article>
-      <article class="card card--persona"><h3>2 · Tuner / designer</h3><ul>
-        <li>As a non-coder, I want my game’s meaningful knobs as sliders, so I can balance difficulty &amp; feel myself.</li>
-        <li>As someone iterating on fun, I want instant tweak-and-playtest, so I skip the slow regenerate loop.</li>
-        <li>As I improve, I want a Simple → Advanced path, so the tool scales with my skill.</li>
-      </ul></article>
-      <article class="card card--persona"><h3>3 · Marketer of their game</h3><ul>
-        <li>As a creator, I want my title &amp; pitch editable forever, so I can re-frame the hook without rebuilding.</li>
-        <li>As a creator in a feed, I want to iterate my “listing” like an app, so I lift click-through &amp; discoverability.</li>
-      </ul></article>
-      <article class="card card--persona"><h3>4 · Aspiring earner</h3><ul>
-        <li>As a creator, I want a clear, gamified path to getting paid, so I know what to chase (plays + games).</li>
-        <li>As a data-minded creator, I want analytics on plays &amp; retention, so I double down on what works.</li>
-        <li>As an ambitious creator, I want jams &amp; community, so I get distribution, deadlines &amp; motivation.</li>
-      </ul></article>
-      <article class="card card--persona"><h3>5 · Player → creator</h3><ul>
-        <li>As a player, I want an endless feed of instant games, so the platform is “a fun way to spend time.”</li>
-        <li>As a player who likes a game, I want to remix it, so consuming naturally tips me into creating.</li>
-      </ul></article>
-    </div>
-
-    <div class="split split--even">
-      <aside class="callout callout--info callout--tall">
-        <p class="callout__kick">◆ Strategic read</p>
-        <h4>What the tool is really optimising for</h4>
-        <p>Astrocade’s real job isn’t “make a game” — it’s to <strong>collapse the consumer → creator gap</strong> so the audience itself becomes the content engine. The tooling optimises for three things: <em>time-to-first-playable</em>, the <em>confidence to keep going</em>, and a <em>reason to come back and earn</em>. That’s a creator-economy / social-media playbook (YouTube, TikTok) — not a game-engine playbook (Unity, Roblox Studio). The craft shifts from building to prompting, tuning and pitching.</p>
-      </aside>
-      <aside class="callout callout--anti callout--tall">
-        <p class="callout__kick">★ The anti-stories — what Astrocade deliberately doesn’t serve</p>
-        <h4>The unmet stories = the Weekend / Crucible opening</h4>
-        <ul>
-          <li>“…so my friends and I can play together in the same room, on the TV.” <span class="arrow">→</span> couch / local multiplayer (game night)</li>
-          <li>“…so I can create and play hands-free, just by talking.” <span class="arrow">→</span> voice-first interaction</li>
-          <li>“…so I can build a deeper game I truly own and take anywhere.” <span class="arrow">→</span> depth + real ownership / portability</li>
-        </ul>
-        <p class="callout__punch">These three absences are precisely the user stories Weekend / Crucible is built to own.</p>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- 9 · IMPLICATIONS -->
-<section id="implications" class="section section--finale">
-  <div class="wrap">
-    <header class="section__head">
-      <span class="section__num">09</span>
-      <h2>Implications &amp; Opportunities for Weekend / Crucible</h2>
-      <p class="section__lede">So what? Where Astrocade’s shape leaves room for a TV-first, voice-first, local-multiplayer platform.</p>
-    </header>
-    <div class="cards cards--4">
-      <article class="card card--imp"><h3>Our whitespace</h3><p>Astrocade is phone-first and solo-async-social. TV gaming, couch / local multiplayer (game night) and voice-first interaction are exactly what it does NOT do. That is a category to own — not a feature war on their turf.</p></article>
-      <article class="card card--imp"><h3>Differentiators to own</h3><p>Voice-first creation &amp; play (vs their text prompt). The TV as the shared screen with phones as controllers. Designed-for-together, in-the-room multiplayer. “Game night” occasions instead of solo feed-scrolling.</p></article>
-      <article class="card card--imp"><h3>Plays worth borrowing</h3><p>Wish-to-game simplicity + “Inspire Me.” Per-game adaptive edit mode. Live in-editor preview. Editable post-launch metadata. Remix-as-onramp. A creator economy with a clear gate + seed fund. Bi-weekly jams for cadence.</p></article>
-      <article class="card card--imp"><h3>Risks to avoid</h3><p>Don’t inherit platform lock-in — allow real ownership / export where possible. Budget for per-generation compute cost early. Don’t ship shallow one-offs; depth &amp; replayability suit couch play. Invest in real docs &amp; onboarding.</p></article>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="footer">
   <div class="wrap">
-    <p class="footer__title">Competitive Analysis — Astrocade</p>
-    <p class="footer__meta">Prepared by Paper Lee · June 2026 · for the Weekend / Crucible TV-gaming platform.</p>
-    <p class="footer__links">
-      <a href="https://www.figma.com/board/QFfTuIiUQlZmPU6tD0SqIo/Comp-Analysis" target="_blank" rel="noopener">Source FigJam board ↗</a>
-      <span>·</span>
-      <a href="https://www.astrocade.com" target="_blank" rel="noopener">astrocade.com ↗</a>
-    </p>
+    <p class="footer__title">Foundry — Competitive Analysis</p>
+    <p class="footer__meta">Prepared by Paper Lee · June 2026 · for the Foundry game-generation platform.</p>
   </div>
 </footer>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" hidden>
-  <button class="lightbox__close" aria-label="Close">✕</button>
-  <img src="" alt="" class="lightbox__img" />
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
