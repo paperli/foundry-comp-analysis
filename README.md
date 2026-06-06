@@ -9,23 +9,35 @@ A landing page at the root lists each competitor as a tile; each competitor gets
 | Competitor | Status | Path |
 |------------|--------|------|
 | [Astrocade](https://www.astrocade.com) — AI "wish-to-game" platform | ✅ Live | [`/astrocade`](./astrocade/) |
-| Tesana | 🚧 Coming soon | — |
+| [Tesana](https://tesana.ai) — AI "make-any-game" platform (real Godot export) | ✅ Live | [`/tesana`](./tesana/) |
+
+The landing page also carries an **at-a-glance 3-way comparison** (Astrocade vs Tesana vs Foundry).
 
 ## Stack
-Plain HTML, CSS and a little vanilla JS. No build step, no dependencies (fonts via Google Fonts).
+Plain HTML, CSS and a little vanilla JS. No build step, no dependencies (fonts via Google Fonts). All pages share one **centralized design system** — see [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md) and the living style guide at [`/styleguide/`](./styleguide/).
 
 ```
-index.html          — landing page (competitor tiles)
-styles.css          — landing-page theme
-astrocade/          — Astrocade teardown (self-contained)
-  index.html        — all content
-  styles.css        — responsive dark theme
-  script.js         — mobile nav, active-section nav, image lightbox
-  assets/img/       — Studio screenshots (resized to 1600px)
-.nojekyll           — serve assets as-is on GitHub Pages
+index.html            — landing page (competitor tiles + 3-way comparison)
+DESIGN-SYSTEM.md      — design-system docs + "add a competitor" playbook
+assets/
+  css/
+    tokens.css        — design tokens (:root custom properties) — single source of truth
+    base.css          — reset, type, layout primitives, topbar, hero atoms, lightbox
+    report.css        — report components (hero, KPIs, sections, cards, figs, callouts, flow, SWOT)
+    landing.css       — landing components (tiles, comparison table)
+  js/report.js        — shared report behaviour (mobile nav, scroll-spy, lightbox)
+  logos/              — competitor logos used on the tiles
+styleguide/index.html — living style guide (renders every token + component)
+astrocade/            — Astrocade teardown
+  index.html          — content; links ../assets/css/* + ../assets/js/report.js
+  assets/img/         — Studio screenshots (resized to 1600px)
+tesana/               — Tesana teardown
+  index.html          — content; links the same shared system
+  assets/img/         — Studio screenshots (from the FigJam board)
+.nojekyll             — serve assets as-is on GitHub Pages
 ```
 
-Each competitor sub-page is fully self-contained (its own HTML/CSS/JS/assets) and uses only relative paths, so the whole folder can be dropped under any route. To add a new competitor: create a folder (e.g. `tesana/`), drop the page in, and add a tile to the root `index.html`.
+Pages reference the shared system via relative paths (`../assets/...`), so a token or component change propagates everywhere at once. To add a new competitor, follow the playbook in [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md): copy a report folder, drop in screenshots, add a tile + comparison column.
 
 ## Run locally
 Serve the folder root so relative paths resolve:

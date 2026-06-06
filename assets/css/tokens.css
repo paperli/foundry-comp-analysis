@@ -1,0 +1,54 @@
+/* ============================================================
+   Foundry — Competitive Analysis · Design Tokens
+   The single source of truth for colour, type, spacing, radius,
+   elevation and motion. Imported first by every page.
+   ============================================================ */
+
+:root {
+  /* --- Surfaces & ink (dark theme) --- */
+  --bg: #0a0c12;          /* page background */
+  --bg-alt: #0d1019;      /* alternating section / footer background */
+  --surface: #141822;     /* cards, chips, panels */
+  --surface-2: #1a1f2c;   /* raised / hovered surface, nav pill */
+  --border: #262c3a;      /* default border */
+  --border-soft: #1e2330; /* subtle hairline border */
+  --text: #e9ecf4;        /* primary text */
+  --muted: #9aa4ba;       /* secondary text */
+  --faint: #6b7488;       /* tertiary / disabled text */
+  --ink-strong: #ffffff;  /* emphasis text on dark (was inline #fff) */
+  --ink-lead: #cfd6e6;    /* lead / paragraph emphasis (was inline #cfd6e6) */
+  --on-accent: #04121c;   /* text on a bright accent fill */
+
+  /* --- Brand accents --- */
+  --cyan: #34d6ff;        /* primary accent */
+  --blue: #4f8cff;        /* secondary accent */
+  --grad: linear-gradient(135deg, #34d6ff 0%, #4f8cff 100%);
+
+  /* --- Semantic / category accents --- */
+  --gold: #f2c14e;        /* key features, implications */
+  --gold-dim: #d9a61a;
+  --violet: #a78bfa;      /* agentic AI, hero figures */
+  --violet-deep: #8b5cf6;
+  --green: #4ade80;       /* live, strengths, "our lane" */
+  --green-deep: #22c55e;
+  --pink: #f472b6;
+  --red: #fb7185;         /* weaknesses */
+
+  /* --- Layout --- */
+  --maxw: 1180px;         /* content column max-width */
+  --topbar-h: 62px;
+
+  /* --- Radius --- */
+  --radius: 16px;
+  --radius-sm: 12px;
+
+  /* --- Elevation --- */
+  --shadow: 0 10px 40px -12px rgba(0,0,0,.6);
+
+  /* --- Motion --- */
+  --ease: cubic-bezier(.4,0,.2,1);
+
+  /* --- Type families --- */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+}

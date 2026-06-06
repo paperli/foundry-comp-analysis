@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Design System — Foundry Competitive Analysis</title>
+<meta name="description" content="Living style guide: design tokens and reusable components for the Foundry competitive-analysis site." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<!-- The system itself — same files every page links -->
+<link rel="stylesheet" href="../assets/css/tokens.css" />
+<link rel="stylesheet" href="../assets/css/base.css" />
+<link rel="stylesheet" href="../assets/css/report.css" />
+<link rel="stylesheet" href="../assets/css/landing.css" />
+<style>
+  /* Guide-only scaffolding (not part of the design system) */
+  .sg-section { padding: clamp(36px, 5vw, 64px) 0; border-bottom: 1px solid var(--border-soft); }
+  .sg-section > .wrap > h2 { font-size: clamp(22px, 3vw, 32px); margin: 0 0 6px; }
+  .sg-kicker { color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; margin: 0 0 8px; }
+  .sg-note { color: var(--muted); margin: 0 0 28px; max-width: 760px; }
+  .sg-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+  .sg-swatch { border: 1px solid var(--border-soft); border-radius: var(--radius-sm); overflow: hidden; background: var(--surface); }
+  .sg-swatch__chip { height: 64px; }
+  .sg-swatch__meta { padding: 10px 12px; font-size: 12.5px; }
+  .sg-swatch__meta b { font-family: var(--font-display); display: block; }
+  .sg-swatch__meta span { color: var(--faint); }
+  .sg-type > * { margin: 0 0 10px; }
+  .sg-row { display: grid; gap: 18px; margin-top: 8px; }
+  .sg-demo { background: var(--bg-alt); border: 1px dashed var(--border); border-radius: var(--radius); padding: 24px; margin-top: 8px; }
+  code.sg-tag { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: var(--violet); background: var(--surface); border: 1px solid var(--border-soft); border-radius: 6px; padding: 1px 7px; }
+  .sg-toc { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sg-toc a { font-size: 13px; color: var(--muted); border: 1px solid var(--border); border-radius: 999px; padding: 6px 13px; }
+  .sg-toc a:hover { color: var(--text); background: var(--surface-2); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#tokens">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="../">
+      <span class="brand__star" aria-hidden="true">✦</span>
+      <span class="brand__text">Foundry <em>· Design System</em></span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Design system · living style guide</p>
+    <h1>Design System<span class="hero__dash">—</span><span class="hero__name">Components &amp; Tokens</span></h1>
+    <p class="hero__lead">Every token and component the competitive-analysis site is built from. Compose a new
+      competitor report from these parts — link <code class="sg-tag">tokens.css → base.css → report.css</code> and reuse the markup below.</p>
+    <nav class="sg-toc" aria-label="Sections">
+      <a href="#tokens">Color</a><a href="#type">Type</a><a href="#chrome">Top bar</a>
+      <a href="#hero">Hero</a><a href="#kpis">KPIs</a><a href="#cards">Cards</a>
+      <a href="#callouts">Callouts</a><a href="#banner">Banner</a><a href="#flow">Flow</a>
+      <a href="#swot">SWOT</a><a href="#figs">Figures</a><a href="#tiles">Tiles</a>
+    </nav>
+  </div>
+</section>
+
+<main>
+
+<!-- COLOR -->
+<section id="tokens" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Tokens</p>
+    <h2>Color</h2>
+    <p class="sg-note">Defined in <code class="sg-tag">tokens.css</code> as CSS custom properties. Reference with <code class="sg-tag">var(--token)</code> — never hard-code a hex.</p>
+    <div class="sg-swatches">
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--bg)"></div><div class="sg-swatch__meta"><b>--bg</b><span>page</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--bg-alt)"></div><div class="sg-swatch__meta"><b>--bg-alt</b><span>alt section</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--surface)"></div><div class="sg-swatch__meta"><b>--surface</b><span>cards</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--surface-2)"></div><div class="sg-swatch__meta"><b>--surface-2</b><span>raised</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--border)"></div><div class="sg-swatch__meta"><b>--border</b><span>border</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--text)"></div><div class="sg-swatch__meta"><b>--text</b><span>primary ink</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--muted)"></div><div class="sg-swatch__meta"><b>--muted</b><span>secondary</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--faint)"></div><div class="sg-swatch__meta"><b>--faint</b><span>tertiary</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--cyan)"></div><div class="sg-swatch__meta"><b>--cyan</b><span>primary accent</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--blue)"></div><div class="sg-swatch__meta"><b>--blue</b><span>secondary</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--grad)"></div><div class="sg-swatch__meta"><b>--grad</b><span>brand gradient</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--gold)"></div><div class="sg-swatch__meta"><b>--gold</b><span>key / implications</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--violet)"></div><div class="sg-swatch__meta"><b>--violet</b><span>agentic AI</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--green)"></div><div class="sg-swatch__meta"><b>--green</b><span>live / strengths</span></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:var(--red)"></div><div class="sg-swatch__meta"><b>--red</b><span>weaknesses</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section id="type" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Tokens</p>
+    <h2>Typography</h2>
+    <p class="sg-note">Display = <code class="sg-tag">var(--font-display)</code> (Space Grotesk) for headings; body = <code class="sg-tag">var(--font-sans)</code> (Inter). Headings are fluid with <code class="sg-tag">clamp()</code>.</p>
+    <div class="sg-type">
+      <h1 style="font-size:clamp(38px,8vw,84px);margin:0">Heading 1 · hero</h1>
+      <h2 style="font-size:clamp(27px,4.4vw,44px);margin:0">Heading 2 · section</h2>
+      <h3 class="subhead" style="margin:0">Subhead · grouping</h3>
+      <p style="font-size:18px;color:var(--ink-lead);margin:0">Lead paragraph — used for hero and snapshot copy in <code class="sg-tag">--ink-lead</code>.</p>
+      <p style="color:var(--muted);margin:0">Body text in <code class="sg-tag">--muted</code>, the default for card and callout copy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TOP BAR -->
+<section id="chrome" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · base.css</p>
+    <h2>Top bar &amp; nav</h2>
+    <p class="sg-note"><code class="sg-tag">.topbar</code> + <code class="sg-tag">.brand</code> are shared chrome; report pages add <code class="sg-tag">.nav</code>, <code class="sg-tag">.cta</code> and the mobile <code class="sg-tag">.navtoggle</code>.</p>
+    <div class="sg-demo" style="padding:0">
+      <div class="topbar" style="position:static">
+        <div class="topbar__inner">
+          <a class="brand" href="#chrome"><span class="brand__star">✦</span><span class="brand__text">Competitor <em>· Comp Analysis</em></span></a>
+          <nav class="nav"><a class="is-active" href="#chrome">Company</a><a href="#chrome">Gameplay</a><a href="#chrome">Toolkit</a></nav>
+          <a class="cta" href="#chrome">Open FigJam ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERO -->
+<section id="hero" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · report.css</p>
+    <h2>Hero atoms</h2>
+    <div class="sg-demo">
+      <p class="eyebrow">Competitive analysis · UX · product · strategy</p>
+      <h1 class="hero" style="font-size:clamp(38px,8vw,64px);margin:0 0 16px;padding:0;background:none;border:0">Competitive Analysis<span class="hero__dash">—</span><span class="hero__name">Competitor</span></h1>
+      <ul class="meta-chips"><li>Prepared by Paper Lee</li><li>June 2026</li><li>Source: example.com</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- KPIs -->
+<section id="kpis" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · report.css</p>
+    <h2>KPI strip &amp; snapshot</h2>
+    <div class="kpis">
+      <div class="kpi"><span class="kpi__num">~10K</span><span class="kpi__lab">A headline metric</span></div>
+      <div class="kpi"><span class="kpi__num">~3 min</span><span class="kpi__lab">Another metric</span></div>
+      <div class="kpi"><span class="kpi__num">4 tiers</span><span class="kpi__lab">And another</span></div>
+      <div class="kpi"><span class="kpi__num">$56M</span><span class="kpi__lab">Funding</span></div>
+      <div class="kpi"><span class="kpi__num">n / d</span><span class="kpi__lab">Undisclosed</span></div>
+    </div>
+    <div class="tldr" style="margin-top:18px"><h2>Snapshot — what this is</h2><p>The <code class="sg-tag">.tldr</code> panel holds the one-paragraph summary, with a cyan accent rail. <strong>Emphasis</strong> uses <code class="sg-tag">--ink-strong</code>.</p></div>
+  </div>
+</section>
+
+<!-- CARDS -->
+<section id="cards" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · report.css</p>
+    <h2>Cards</h2>
+    <p class="sg-note">Grid via <code class="sg-tag">.cards .cards--4</code> / <code class="sg-tag">--5</code>. Variants tint the top border: <code class="sg-tag">.card--agent</code>, <code class="sg-tag">.card--imp</code>, <code class="sg-tag">.card--persona</code>.</p>
+    <div class="cards cards--4">
+      <article class="card"><h3>Default card</h3><p>The base card for a fact or finding.</p></article>
+      <article class="card card--agent"><h3>Agent card</h3><p>Violet rail — for the agentic-AI roles.</p></article>
+      <article class="card card--imp"><h3>Implication card</h3><p>Gold rail — for opportunities &amp; implications.</p></article>
+      <article class="card card--persona"><h3>1 · Persona <span>(type)</span></h3><ul><li>As a user, I want…</li><li>…so that…</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- CALLOUTS -->
+<section id="callouts" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · report.css</p>
+    <h2>Callouts</h2>
+    <p class="sg-note">Intent via modifier: <code class="sg-tag">--key</code> (gold), <code class="sg-tag">--dev</code> (green), <code class="sg-tag">--info</code> (blue), <code class="sg-tag">--anti</code> (gold, list). The <code class="sg-tag">.callout__weekend</code> line tints to the intent colour.</p>
+    <div class="callouts callouts--2">
+      <aside class="callout callout--key"><p class="callout__kick">★ Key feature</p><h4>A standout capability</h4><ul><li>What it is and why it matters.</li><li class="callout__weekend">For Weekend / Foundry → how we'd apply it.</li></ul></aside>
+      <aside class="callout callout--dev"><p class="callout__kick">◆ Developer favourite</p><h4>A craft detail</h4><ul><li>Something the tooling does well.</li><li class="callout__weekend">For Weekend / Foundry → our angle.</li></ul></aside>
+      <aside class="callout callout--info"><p class="callout__kick">◆ Strategic read</p><h4>What it optimises for</h4><p>A short interpretive paragraph in muted text.</p></aside>
+      <aside class="callout callout--anti"><p class="callout__kick">★ Anti-stories</p><h4>What it doesn't serve</h4><ul><li>"…unmet need." <span class="arrow">→</span> our opening</li></ul><p class="callout__punch">The punch line lands here.</p></aside>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<section id="banner" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · report.css</p>
+    <h2>North-star banner</h2>
+    <div class="banner--northstar"><p class="callout__kick">★ North-star job-to-be-done</p><h3>The single sentence the product is built around</h3><p>One framing paragraph with <strong>emphasis</strong>, used once near the top of the user-stories section.</p></div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · report.css</p>
+    <h2>Flow stepper</h2>
+    <p class="sg-note"><code class="sg-tag">.flow</code> with <code class="sg-tag">.flow__step</code>; mark the pivotal step <code class="sg-tag">.flow__step--accent</code>. Arrows hide below 1080px.</p>
+    <ol class="flow">
+      <li class="flow__step"><span class="flow__n">1</span><h4>Step one</h4><p>Short description.</p></li>
+      <li class="flow__step"><span class="flow__n">2</span><h4>Step two</h4><p>Short description.</p></li>
+      <li class="flow__step flow__step--accent"><span class="flow__n">3</span><h4>Key step</h4><p>The accented pivot.</p></li>
+      <li class="flow__step"><span class="flow__n">4</span><h4>Step four</h4><p>Short description.</p></li>
+      <li class="flow__step"><span class="flow__n">5</span><h4>Step five</h4><p>Short description.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SWOT -->
+<section id="swot" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · report.css</p>
+    <h2>Strengths / Weaknesses</h2>
+    <div class="swot">
+      <div class="swot__col swot__col--pos"><h3>Strengths</h3><ul><li>What it does well</li><li>Another genuine edge</li></ul></div>
+      <div class="swot__col swot__col--neg"><h3>Weaknesses</h3><ul><li>Where it's exposed</li><li>Another gap</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIGURES -->
+<section id="figs" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · report.css</p>
+    <h2>Figures</h2>
+    <p class="sg-note"><code class="sg-tag">.figs--2</code> / <code class="sg-tag">--3</code> grids of <code class="sg-tag">.fig</code>. When a screenshot isn't ready, use the <code class="sg-tag">.fig__ph</code> placeholder — swap it for an <code class="sg-tag">&lt;img&gt;</code> later and the lightbox just works.</p>
+    <div class="figs figs--2">
+      <figure class="fig"><div class="fig__ph"><span class="fig__ph-glyph">▦</span><span class="fig__ph-label">Placeholder figure</span></div><figcaption>Captioned placeholder — the scaffold for a screenshot not yet captured.</figcaption></figure>
+      <figure class="fig"><div class="fig__ph"><span class="fig__ph-glyph">⚙</span><span class="fig__ph-label">Another placeholder</span></div><figcaption>Use a glyph that hints at the captured screen.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- TILES + COMPARE (landing components) -->
+<section id="tiles" class="sg-section">
+  <div class="wrap">
+    <p class="sg-kicker">Component · landing.css</p>
+    <h2>Tiles &amp; comparison</h2>
+    <p class="sg-note">Landing-only: the competitor <code class="sg-tag">.tile</code> grid and the <code class="sg-tag">.cmp</code> table inside a <code class="sg-tag">.cmp-scroll</code> wrapper (highlight our column with <code class="sg-tag">.cmp__us</code>).</p>
+    <ul class="tiles">
+      <li><a class="tile" href="#tiles"><span class="tile__badge tile__badge--live">Live</span><span class="tile__logo"><span style="font-size:30px;color:var(--cyan)">✦</span></span><span class="tile__name">Competitor</span><span class="tile__desc">A one-line teaser of the teardown.</span><span class="tile__go">View analysis →</span></a></li>
+      <li><div class="tile tile--soon"><span class="tile__badge tile__badge--soon">Coming soon</span><span class="tile__logo"><span style="font-size:30px;color:var(--violet)">◆</span></span><span class="tile__name">Next one</span><span class="tile__desc">Teardown in progress.</span><span class="tile__go tile__go--muted">In progress</span></div></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer__title">Foundry — Design System</p>
+    <p class="footer__meta">Tokens &amp; components for the competitive-analysis site. See <code class="sg-tag">DESIGN-SYSTEM.md</code> to add a new report.</p>
+    <p class="footer__links"><a href="../">← Back to overview</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

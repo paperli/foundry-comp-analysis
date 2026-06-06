@@ -12,7 +12,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/landing.css" />
 </head>
 <body>
 <a class="skip-link" href="#analyses">Skip to content</a>
@@ -60,18 +62,85 @@
       </li>
 
       <li>
-        <div class="tile tile--soon" aria-disabled="true">
-          <span class="tile__badge tile__badge--soon">Coming soon</span>
+        <a class="tile" href="tesana/">
+          <span class="tile__badge tile__badge--live">Live</span>
           <span class="tile__logo">
             <img class="tile__logo-img--invert" src="assets/logos/tesana.png" alt="Tesana logo" width="44" height="44" />
           </span>
           <span class="tile__name">Tesana</span>
-          <span class="tile__desc">Teardown in progress. Check back soon.</span>
-          <span class="tile__go tile__go--muted">In progress</span>
-        </div>
+          <span class="tile__desc">The AI “make-any-game” platform — outputs a real, exportable Godot project. Company, gameplay, toolkit, agentic pipeline, business model &amp; strengths.</span>
+          <span class="tile__go">View analysis →</span>
+        </a>
       </li>
 
     </ul>
+  </div>
+</section>
+
+<!-- AT A GLANCE — 3-WAY COMPARISON -->
+<section id="compare" class="section section--compare">
+  <div class="wrap">
+    <header class="compare__head">
+      <h2>At a glance — Astrocade vs Tesana vs Foundry</h2>
+      <p>One-glance summary of where the two AI prompt-to-game platforms sit, and the lane Weekend / Foundry owns.</p>
+    </header>
+
+    <div class="cmp-scroll" role="region" aria-label="Three-way comparison table" tabindex="0">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th scope="col">Dimension</th>
+            <th scope="col">Astrocade</th>
+            <th scope="col">Tesana</th>
+            <th scope="col" class="cmp__us">Foundry <span>(Weekend) · us</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Output &amp; ownership</th>
+            <td>2D casual mini-games. No export — platform lock-in.</td>
+            <td>2D + 3D games. Real Godot project; export to macOS / Win / Web / source — you own it.</td>
+            <td class="cmp__us">TV games for the living room; owned + licensed show formats.</td>
+          </tr>
+          <tr>
+            <th scope="row">Device / platform</th>
+            <td>Phone-first: browser + iOS / Android.</td>
+            <td>Browser + iOS / Android; desktop / web export.</td>
+            <td class="cmp__us">TV-first; phones connect as controllers.</td>
+          </tr>
+          <tr>
+            <th scope="row">Play context</th>
+            <td>Solo; async social feed.</td>
+            <td>Solo; async community feed.</td>
+            <td class="cmp__us">Co-present, in-the-room: couch local multiplayer (game night) + single player.</td>
+          </tr>
+          <tr>
+            <th scope="row">Input / interaction</th>
+            <td>Touch + text prompt.</td>
+            <td>Mouse / touch / keyboard; voice only to prompt.</td>
+            <td class="cmp__us">Voice-first + touch, gesture, gyro, motion.</td>
+          </tr>
+          <tr>
+            <th scope="row">IP / content</th>
+            <td>Original user games.</td>
+            <td>Original user games.</td>
+            <td class="cmp__us">Major TV-show IP — Jeopardy, Wheel of Fortune, Family Duel, Are You Smarter…</td>
+          </tr>
+          <tr>
+            <th scope="row">Creation UX</th>
+            <td>Wish → named concept → agent team (~10 min).</td>
+            <td>Prompt / template → live agent build (~3 min); real-time thought-stream.</td>
+            <td class="cmp__us">Describe a game-night idea; tuned for shared TV play.</td>
+          </tr>
+          <tr>
+            <th scope="row">Creator economy &amp; scale</th>
+            <td>Play payouts + $10M fund, 100K-play gate. $56M (Sea, Sequoia); ~5M MAU.</td>
+            <td>Play + social-clip payouts (per 1K views), weekly via Stripe. Funding / MAU undisclosed; ~10K paying users.</td>
+            <td class="cmp__us">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 </main>

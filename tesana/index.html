@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Competitive Analysis — Tesana | UX &amp; Strategy Teardown</title>
+<meta name="description" content="A UX, product and strategy teardown of Tesana — the AI 'make-any-game' platform that emits a real Godot project — analysed for the Weekend / Foundry TV-gaming thesis." />
+<meta name="author" content="Paper Lee" />
+<meta property="og:title" content="Competitive Analysis — Tesana" />
+<meta property="og:description" content="AI 'make-any-game' platform that outputs a real, exportable Godot project — UX, product & strategy teardown for a TV-first, voice-first, local-multiplayer platform." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/tokens.css" />
+<link rel="stylesheet" href="../assets/css/base.css" />
+<link rel="stylesheet" href="../assets/css/report.css" />
+</head>
+<body>
+<a class="skip-link" href="#company">Skip to content</a>
+
+<header class="topbar" id="top">
+  <div class="topbar__inner">
+    <a class="brand" href="../">
+      <span class="brand__star" aria-hidden="true">✦</span>
+      <span class="brand__text">Tesana <em>· Comp Analysis</em></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#company">Company</a>
+      <a href="#gameplay">Gameplay</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#agentic">Agentic AI</a>
+      <a href="#social">Social</a>
+      <a href="#business">Business</a>
+      <a href="#swot">Strengths</a>
+      <a href="#user-stories">User stories</a>
+      <a href="#implications">Implications</a>
+    </nav>
+    <a class="cta" href="https://www.figma.com/board/QFfTuIiUQlZmPU6tD0SqIo/Foundry---Comp-Analysis?node-id=76-30" target="_blank" rel="noopener">Open FigJam ↗</a>
+    <button class="navtoggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Competitive analysis · UX · product · strategy</p>
+    <h1>Competitive Analysis<span class="hero__dash">—</span><span class="hero__name">Tesana</span></h1>
+    <p class="hero__lead">The AI <strong>“make-any-game”</strong> platform — powered by its own model <strong>Muranyi-3</strong> and emitting a
+      <strong>real, exportable Godot project</strong> — read through the lens of the
+      <strong>Weekend / Foundry</strong> thesis: TV-first, voice-first, local-multiplayer game nights.</p>
+    <ul class="meta-chips">
+      <li>Prepared by Paper Lee</li>
+      <li>June 2026</li>
+      <li>Source: tesana.ai + a live signed-in Studio walkthrough</li>
+    </ul>
+
+    <div class="kpis">
+      <div class="kpi"><span class="kpi__num">~10K</span><span class="kpi__lab">Paying customers in the first ~2 weeks<br>(only hard public figure)</span></div>
+      <div class="kpi"><span class="kpi__num">Mar 2026</span><span class="kpi__lab">Public debut at GDC; first press ~Apr 2026</span></div>
+      <div class="kpi"><span class="kpi__num">~3 min</span><span class="kpi__lab">From a prompt to a playable game (observed live)</span></div>
+      <div class="kpi"><span class="kpi__num">4 tiers</span><span class="kpi__lab">Free → $200/mo, credit-based (no free scratch builds)</span></div>
+      <div class="kpi"><span class="kpi__num">n / d</span><span class="kpi__lab">Funding, MAU &amp; valuation undisclosed (June 2026)</span></div>
+    </div>
+
+    <div class="tldr">
+      <h2>Snapshot — what Tesana is</h2>
+      <p>Tesana is a generative-AI “make any game” platform powered by its own proprietary model, <strong>Muranyi-3</strong>,
+        which turns a text prompt into a complete, playable game — assets, mechanics, code, UI and audio — emitted as a
+        <strong>real Godot project</strong> in minutes, no code or art skills. It pairs creation with a community
+        storefront / feed (Explore) for discovering, playing, favouriting and remixing games, plus a creator back-office
+        (My&nbsp;Games, Profile, Earnings) and a live creator-payout program. Critically vs Astrocade it generates
+        <strong>real, exportable engine source</strong> (Godot; macOS / Windows / Web / source export) and targets 3D —
+        yet like Astrocade it is <strong>screen-first and solo-async-social: no TV mode, no couch / local multiplayer</strong>,
+        and voice is a prompting input, not a way to play together.</p>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<!-- 1 · COMPANY -->
+<section id="company" class="section">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">01</span>
+      <h2>Company, Market &amp; Funding</h2>
+      <p class="section__lede">Who is behind Tesana, what is actually known about funding and scale, and who they are really for.</p>
+    </header>
+    <div class="cards cards--4">
+      <article class="card">
+        <h3>Founders &amp; team</h3>
+        <p>Co-founders Johannes Vermandois (CEO; Y Combinator alum, prior skincare &amp; AI-marketing startups) and Eric Heimer (CTO). Vermandois demoed Tesana live at GDC in March 2026. Team size undisclosed; the iOS app ships under Dreamsands&nbsp;Inc. A small, founder-led startup — not a game studio or a frontier-AI lab.</p>
+      </article>
+      <article class="card">
+        <h3>Funding &amp; investors</h3>
+        <p>Not publicly disclosed as of June 2026. Press (PC Gamer) explicitly notes the team, tech and funding details are “thin.” No round, lead, angel or valuation on record — a stark contrast to Astrocade’s loud $56M / Sequoia + Google + Nvidia story.</p>
+      </article>
+      <article class="card">
+        <h3>Traction</h3>
+        <p>One hard public number: ~10,000 paying customers within the first ~2 weeks of launch (late Mar 2026). MAU, games created, plays and creator counts are all undisclosed. Growth claims are founder-stated, not third-party verified.</p>
+      </article>
+      <article class="card">
+        <h3>Positioning &amp; market</h3>
+        <p>Tagline “The #1 AI Game Maker.” Mission: bring 100M new people into game-making — explicitly aimed at non-coders. Frames AI-made indie games as the future. Named rivals: Roblox, Rosebud, Ludo.ai; open-source comparator Godogen.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · GAMEPLAY -->
+<section id="gameplay" class="section section--alt">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">02</span>
+      <h2>Gameplay Platform</h2>
+      <p class="section__lede">The games themselves and how people actually play them.</p>
+    </header>
+    <div class="cards cards--4">
+      <article class="card"><h3>Game types</h3><p>Real-time 2D <strong>and</strong> 3D games across many genres: platformers, FPS / shooters, racing, survival sandbox, roguelike, RPG, simulation, strategy, cozy and story games. Deeper and more varied than Astrocade’s bite-size 2D mini-games — Muranyi-3 targets “3D worlds with game logic built in.”</p></article>
+      <article class="card"><h3>How it’s played</h3><p>Plays instantly in the browser (play.tesana.ai) and in iOS / Android apps; exportable to macOS / Windows / Web / Godot source on paid tiers. Mouse / touch / keyboard, single-player. No console / TV target, no gamepad, no local couch co-op.</p></article>
+      <article class="card"><h3>Discovery feed</h3><p>“Explore” is a community storefront: “Featured Today” + genre rails (Adventure, etc.). Each tile shows title, creator handle, play count (top games 30K+) and favourite / ▶ play. App-Store-style categories blended with a social feed.</p></article>
+      <article class="card"><h3>Session &amp; retention loop</h3><p>Loop: play → favourite / follow → remix → create → publish to feed → share clips to earn. A creation-and-distribution flywheel — but consumed solo on a personal screen, not as a shared in-the-room session.</p></article>
+    </div>
+    <div class="figs figs--2">
+      <figure class="fig">
+        <img src="assets/img/landing.png" alt="tesana.ai marketing landing page" loading="lazy" />
+        <figcaption>tesana.ai landing — “Make any game you can imagine”: a single prompt box over a live 3D world, with a community game showcase below.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/explore.png" alt="Tesana Explore community storefront" loading="lazy" />
+        <figcaption>Explore — the community storefront: “Featured Today” plus genre rails of playable, creator-made games with play counts.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · TOOLKIT -->
+<section id="toolkit" class="section">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">03</span>
+      <h2>Game-Creation Toolkit &amp; Tools UX</h2>
+      <p class="section__lede">The creator-facing tooling: from blank prompt to a published, exportable game — captured live in the signed-in Studio.</p>
+    </header>
+    <div class="cards cards--4">
+      <article class="card"><h3>Entry: prompt or template</h3><p>The Studio opens on “What game should we make now, paperli?” — a multiline prompt box, a row of genre-tagged starter templates (Slice Storm / COZY, Patient Zero / FPS, Jungle Dash / MOBILE…), Style- and Character-reference image uploads, and a model picker (“Smart”). Left rail: Dashboard, My games, Profile, Earn, Explore.</p></article>
+      <article class="card"><h3>Free vs paid gating</h3><p>Key finding: on Free, building from a blank prompt is <strong>disabled</strong> — “Upgrade to build your own game from scratch.” Free users are funnelled into templates / remix; custom-asset import, faster models and all export are paywalled. Credits gate everything.</p></article>
+      <article class="card"><h3>Iterate by chat + Plan mode</h3><p>Creation is a chat: describe changes in plain language and the agent regenerates art, code, mechanics and audio in the live game. A “Plan” toggle lets the agent plan before building. Remixing any community game is a first-class on-ramp.</p></article>
+      <article class="card"><h3>Under the hood: real Godot</h3><p>The Studio exposes Game / Assets / Animations / VFX / Code tabs. The Code tab reveals an actual Godot project — <code>project.godot</code>, <code>.tscn</code> scenes, GDScript (<code>.gd</code>), an <code>assets/</code> tree, even a <code>CLAUDE.md</code>: genuine, exportable engine source.</p></article>
+    </div>
+
+    <div class="figs figs--2">
+      <figure class="fig">
+        <img src="assets/img/studio-entry.png" alt="Tesana Studio entry screen" loading="lazy" />
+        <figcaption>Studio entry — “What game should we make now?”: prompt box + genre-tagged starter templates. Note “Upgrade to build your own game from scratch” on Free.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/code-tab.png" alt="Tesana Studio Code tab showing a Godot project" loading="lazy" />
+        <figcaption>Code tab — a real Godot project: <code>project.godot</code>, <code>.tscn</code> scenes, GDScript (<code>.gd</code>), an <code>assets/</code> tree and a <code>CLAUDE.md</code>. “Synced · Agent active.”</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="subhead">The agentic build — Tesana generates sprites, sound, music and game code live, step by step</h3>
+    <div class="figs figs--2">
+      <figure class="fig">
+        <img src="assets/img/building.png" alt="Tesana agent building a game live" loading="lazy" />
+        <figcaption>Building — the agent streams its work: “Generating Watermelon… Apple… Bomb sprite”, “Creating sound effect: Slice / Splat”, “Programming swipe detection”.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/build-complete.png" alt="Tesana build-complete screen" loading="lazy" />
+        <figcaption>Build complete — “Your fruit slicing game is ready!”: a full game description plus suggested next features. Status flips to Draft.</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="subhead">The finished Studio — one editor, five live tabs, the game playing in-pane</h3>
+    <figure class="fig fig--hero">
+      <img src="assets/img/studio-finished.png" alt="The finished Tesana Studio with the live SLICE STORM game" loading="lazy" />
+      <figcaption>The finished Studio — left: the chat / agent thread; centre: the live playable game (“SLICE STORM”, Play); right: storefront &amp; publish panel. Tabs: Game · Assets · Animations · VFX · Code.</figcaption>
+    </figure>
+
+    <div class="callouts callouts--2">
+      <aside class="callout callout--dev">
+        <p class="callout__kick">◆ Developer favourite — one Studio, five live tabs</p>
+        <h4>Inspect every sprite, effect and line of GDScript</h4>
+        <ul>
+          <li>The same editor exposes <strong>Game, Assets, Animations, VFX and Code</strong> — the generated game plays live in-pane while you inspect every sprite, effect and the raw GDScript.</li>
+          <li>Edit-by-chat and watch it rebuild without leaving the page.</li>
+          <li class="callout__weekend">For Weekend / Foundry → keep a live preview, but make it the TV view with phones as controllers, so creators playtest the real couch experience while editing.</li>
+        </ul>
+      </aside>
+      <aside class="callout callout--key">
+        <p class="callout__kick">★ Key feature — real engine output</p>
+        <h4>A genuine Godot project you can own &amp; export</h4>
+        <ul>
+          <li>Unlike sandbox-only generators, Tesana hands you a <strong>real Godot project</strong> — <code>.tscn</code> scenes, GDScript, assets.</li>
+          <li>On paid tiers it exports to macOS, Windows, playable Web HTML or raw source — genuine ownership and portability, not platform lock-in.</li>
+          <li>Arguably Tesana’s single biggest wedge against Astrocade, whose games can’t leave the platform.</li>
+          <li class="callout__weekend">For Weekend / Foundry → match the “you own it, take it anywhere” promise, framed for TV: export a couch-ready build, not just a feed clip.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <aside class="callout callout--key">
+      <p class="callout__kick">★ Strategic read — the free-tier funnel</p>
+      <h4>Free gets you templates; creation is the paywall</h4>
+      <ul>
+        <li>The Free plan deliberately <strong>disables blank-prompt creation</strong> (“Upgrade to build your own game from scratch”) and funnels new users into one-tap templates and remixing — which DO generate a full game (we built one end-to-end on a $0 account).</li>
+        <li>Scratch builds, custom-asset import, faster models and all export sit behind Pro+. Time-to-first-game is near-zero; open-ended creation and ownership are the conversion levers.</li>
+        <li class="callout__weekend">For Weekend / Foundry → let players start instantly from templates on the TV, reserving deeper authoring &amp; export for upgrade.</li>
+      </ul>
+    </aside>
+
+    <h3 class="subhead">First-run &amp; onboarding — the new-user experience</h3>
+    <div class="figs figs--3">
+      <figure class="fig">
+        <img src="assets/img/onboarding-launch.png" alt="Tesana first-load launch modal" loading="lazy" />
+        <figcaption>Launch modal — a Muranyi-3 “is here” interstitial fires on first load → CTA “Make a game now”.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/onboarding-landing.png" alt="Tesana logged-out landing page" loading="lazy" />
+        <figcaption>Logged-out landing — hero prompt → community showcase → model section → “Ready to build?” CTA.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/onboarding-start.png" alt="Tesana getting-started checklist" loading="lazy" />
+        <figcaption>Getting started — a gamified “0 of 5” checklist: watch → create → storefront → explore → profile.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · AGENTIC -->
+<section id="agentic" class="section section--alt">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">04</span>
+      <h2>Agentic AI Creation UX</h2>
+      <p class="section__lede">Tesana’s signature: a single agent that plans, then generates art, audio, code and logic — the “prompt → playable game” pipeline, with the work shown live.</p>
+    </header>
+
+    <ol class="flow">
+      <li class="flow__step"><span class="flow__n">1</span><h4>Prompt or template</h4><p>Describe a game, tap a genre template, or remix a community game. Optionally add style / character reference images.</p></li>
+      <li class="flow__step"><span class="flow__n">2</span><h4>Plan (optional)</h4><p>A “Plan” toggle lets the agent outline the build first; otherwise it goes straight to generating.</p></li>
+      <li class="flow__step flow__step--accent"><span class="flow__n">3</span><h4>Agent builds live</h4><p>One agent streams the work: sprites, backgrounds, SFX and music, then the game code (GDScript).</p></li>
+      <li class="flow__step"><span class="flow__n">4</span><h4>~Minutes — watched, not hidden</h4><p>A live thought-stream (“Generating Watermelon…”, “Programming swipe detection”) — not a ~10-min black box.</p></li>
+      <li class="flow__step"><span class="flow__n">5</span><h4>Play, iterate, publish</h4><p>Play in-pane, refine by chat, then publish to the feed or export; remixable by others.</p></li>
+    </ol>
+
+    <div class="cards cards--4">
+      <article class="card card--agent"><h3>Art &amp; assets</h3><p>Generates sprites, textures, backgrounds and 3D models from your prompt (21 assets for our fruit game), guided by optional reference images.</p></article>
+      <article class="card card--agent"><h3>Game logic &amp; code</h3><p>Writes real GDScript — input / swipe detection, physics, spawning, scoring, win / lose — as a working Godot project, not a snippet.</p></article>
+      <article class="card card--agent"><h3>Audio</h3><p>Auto-composes music and sound effects (Slice, Splat, Bomb Explosion, Combo Chime) tuned to the game.</p></article>
+      <article class="card card--agent"><h3>Orchestration · Muranyi-3</h3><p>The proprietary model plans &amp; coordinates the build — reportedly orchestrating external LLMs (incl. Claude) + asset generators behind the scenes.</p></article>
+    </div>
+
+    <div class="figs figs--2">
+      <figure class="fig">
+        <img src="assets/img/generating.png" alt="Tesana live agent thought-stream during generation" loading="lazy" />
+        <figcaption>Tap a template → generation starts instantly, with a live agent thought-stream (“Learned about input detection”, “Generating Watermelon…”).</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/assets-tab.png" alt="Tesana Studio Assets tab listing generated assets" loading="lazy" />
+        <figcaption>Assets tab — every sprite, texture and sound the agent generated, individually (21 assets for one game).</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · SOCIAL -->
+<section id="social" class="section">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">05</span>
+      <h2>Social Factors</h2>
+      <p class="section__lede">Community, identity and the loops that make creation social.</p>
+    </header>
+    <div class="cards cards--4">
+      <article class="card"><h3>Creator profiles</h3><p>Every game shows a creator handle (@juicer, @sharky…) linking to a profile / portfolio. Identity is creator-first — closer to YouTube / TikTok creators than gamer gamertags. Follow + Following are built in.</p></article>
+      <article class="card"><h3>Remix culture</h3><p>Any game can be remixed as a starting point (“Remix game” on every tile); Max+ can even “disable remixing.” Remix is the default on-ramp — compounding content and giving newcomers a fast start.</p></article>
+      <article class="card"><h3>Community is off-platform</h3><p>The “Community” surface is a Discord invite, plus Help and Getting-started. Like Astrocade, the real social graph — feedback, tips, support — lives on Discord, not in-app.</p></article>
+      <article class="card"><h3>Favourites &amp; ranked feed</h3><p>Favourites, Following and a play-count-ranked Explore feed drive discovery; social proof (30K+ plays on top games) is front-and-centre. But interaction is async and solo, never co-present.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · BUSINESS -->
+<section id="business" class="section section--alt">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">06</span>
+      <h2>Business Model &amp; Creator Economy</h2>
+      <p class="section__lede">How the platform and its creators make money.</p>
+    </header>
+    <div class="cards cards--4">
+      <article class="card"><h3>How the platform earns</h3><p>Credit-based subscriptions: Free, Pro $20, Max $50, Ultra $200 / mo (2.5K → 35K credits) plus one-time top-ups; credits refresh on a timer on Free. Each generation burns GPU / compute — high marginal cost is the core risk (as with Astrocade).</p></article>
+      <article class="card"><h3>How creators earn</h3><p>A live payout program: creators are paid for verified game plays AND for social clips of their game (TikTok / Reddit / IG / YouTube / Facebook) per 1K views. Cashed out weekly via Stripe above $25.</p></article>
+      <article class="card"><h3>The viral loop</h3><p>Paying creators to post clips off-platform turns every creator into a paid acquisition channel — a UGC growth flywheel. Astrocade pays on in-app plays; Tesana extends payouts to off-platform clip views.</p></article>
+      <article class="card"><h3>Ownership as upsell</h3><p>Commercial rights, watermark removal, source-code download and macOS / Win / Web export are Pro+ perks. “You own your game” is both the value-prop and the primary upgrade lever.</p></article>
+    </div>
+    <div class="figs figs--2">
+      <figure class="fig">
+        <img src="assets/img/earnings.png" alt="Tesana creator Earnings page" loading="lazy" />
+        <figcaption>Earnings — paid for verified video views + game plays; submit clips from TikTok / Reddit / IG / YouTube / FB; cash out weekly via Stripe.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/pricing.png" alt="Tesana pricing tiers" loading="lazy" />
+        <figcaption>Pricing — Free → Ultra ($200/mo), credit-based; “every plan can earn”; ownership, export &amp; faster generation gated to paid tiers.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · STRENGTHS & WEAKNESSES -->
+<section id="swot" class="section">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">07</span>
+      <h2>Strengths &amp; Weaknesses</h2>
+      <p class="section__lede">What Tesana does genuinely well, and where it is exposed.</p>
+    </header>
+    <div class="swot">
+      <div class="swot__col swot__col--pos">
+        <h3>Strengths</h3>
+        <ul>
+          <li>Real, exportable Godot output — genuine ownership, not lock-in (its biggest edge vs Astrocade)</li>
+          <li>2D and 3D across many genres — more depth than bite-size mini-games</li>
+          <li>Near-zero time-to-first-game via templates / remix</li>
+          <li>Transparent live build thread — you watch assets &amp; code generate</li>
+          <li>Multi-tab Studio: Game · Assets · Animations · VFX · Code</li>
+          <li>Clip-to-earn payouts turn creators into a viral acquisition channel</li>
+          <li>Clean, fast, modern UX; instant browser + mobile play</li>
+        </ul>
+      </div>
+      <div class="swot__col swot__col--neg">
+        <h3>Weaknesses</h3>
+        <ul>
+          <li>Free tier blocks scratch creation — can dampen first-run activation</li>
+          <li>Information-opaque: no funding, MAU or scale figures disclosed</li>
+          <li>Very early (launched ~Mar 2026); durability unproven</li>
+          <li>AI output quality varies with the prompt; templates are safest</li>
+          <li>Heavy GPU cost; credits feel restrictive (mixed reviews on price)</li>
+          <li>Community outsourced to Discord; thin in-app social graph</li>
+          <li>Screen-only: no TV, no couch co-op, no voice-first play</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · USER STORIES -->
+<section id="user-stories" class="section section--alt">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">08</span>
+      <h2>User Stories &amp; Jobs-to-be-Done</h2>
+      <p class="section__lede">Read backwards from the features we actually used — the stories Tesana’s tooling is built to fulfil, by persona.</p>
+    </header>
+
+    <div class="banner banner--northstar">
+      <p class="callout__kick">★ North-star job-to-be-done</p>
+      <h3>Turn an idea into a real, playable — and ownable — game in one sitting</h3>
+      <p>“As someone with a game idea but no coding or art skills, I want to turn it into a real, playable, shareable game I can keep and even sell — in one sitting.” The deeper job: <strong>collapse the consumer → creator gap so the audience becomes the content engine</strong> — and, uniquely vs Astrocade, hand them something they truly own.</p>
+    </div>
+
+    <div class="cards cards--5">
+      <article class="card card--persona"><h3>1 · Aspiring creator <span>(non-coder)</span></h3><ul>
+        <li>As a non-coder, I want to describe (or just pick) a game and get something playable, so creating needs a sentence, not code.</li>
+        <li>As a first-timer, I want a template to start from, so I skip the blank page.</li>
+        <li>As someone impatient, I want to watch it build, so the wait feels alive.</li>
+      </ul></article>
+      <article class="card card--persona"><h3>2 · Tinkerer / iterator</h3><ul>
+        <li>As someone refining fun, I want to change the game by chatting, so I improve it without restarting.</li>
+        <li>As a careful builder, I want Plan mode, so I review before it builds.</li>
+        <li>As a remixer, I want to fork any game, so I learn by modifying.</li>
+      </ul></article>
+      <article class="card card--persona"><h3>3 · Owner / shipper</h3><ul>
+        <li>As a creator, I want to export to macOS / Windows / Web / source, so I truly own and ship my game.</li>
+        <li>As a seller, I want commercial rights and no watermark, so I can monetise it — free of platform lock-in.</li>
+      </ul></article>
+      <article class="card card--persona"><h3>4 · Aspiring earner</h3><ul>
+        <li>As a creator, I want to be paid for plays AND for clips I post on social, so reach converts to income.</li>
+        <li>As a data-minded creator, I want play counts on every game, so I double down on what works.</li>
+        <li>Cash out weekly via Stripe.</li>
+      </ul></article>
+      <article class="card card--persona"><h3>5 · Player → creator</h3><ul>
+        <li>As a player, I want an endless Explore feed of instant games, so it’s a fun way to spend time.</li>
+        <li>As a player who likes a game, I want to Remix it, so consuming naturally tips me into creating.</li>
+      </ul></article>
+    </div>
+
+    <div class="split split--even">
+      <aside class="callout callout--info callout--tall">
+        <p class="callout__kick">◆ Strategic read</p>
+        <h4>What the tool is really optimising for</h4>
+        <p>Tesana’s real job isn’t “make a game” — it’s to <strong>collapse the consumer → creator gap AND give creators something they own</strong>. It optimises for time-to-first-playable, the confidence to keep iterating, a reason to come back and earn, and — uniquely vs Astrocade — exportable ownership. A creator-economy playbook (YouTube / TikTok) fused with a “real tool you keep” promise. The craft shifts from building to prompting, tuning and shipping.</p>
+      </aside>
+      <aside class="callout callout--anti callout--tall">
+        <p class="callout__kick">★ The anti-stories — what Tesana deliberately doesn’t serve</p>
+        <h4>The unmet stories = the Weekend / Foundry opening</h4>
+        <ul>
+          <li>“…so my friends and I can play together in the same room, on the TV.” <span class="arrow">→</span> couch / local multiplayer (game night)</li>
+          <li>“…so I can create and play hands-free, just by talking.” <span class="arrow">→</span> voice-first interaction (Tesana uses voice only to prompt)</li>
+          <li>“…so we can play licensed shows like Jeopardy or Wheel of Fortune together.” <span class="arrow">→</span> owned TV-show IP + party formats</li>
+        </ul>
+        <p class="callout__punch">Co-present TV play, voice-first interaction and big-IP party games are precisely what Weekend / Foundry is built to own.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · IMPLICATIONS -->
+<section id="implications" class="section section--finale">
+  <div class="wrap">
+    <header class="section__head">
+      <span class="section__num">09</span>
+      <h2>Implications &amp; Opportunities for Weekend / Foundry</h2>
+      <p class="section__lede">So what? Where Tesana’s shape leaves room for a TV-first, voice-first, local-multiplayer platform.</p>
+    </header>
+    <div class="cards cards--4">
+      <article class="card card--imp"><h3>Our whitespace</h3><p>Like Astrocade, Tesana is screen-first and solo-async-social. TV gaming, couch / local multiplayer (game night) and voice-first PLAY are exactly what it does NOT do — voice is only a prompt input. That category is ours to own.</p></article>
+      <article class="card card--imp"><h3>Differentiators to own</h3><p>The TV as the shared screen with phones as controllers. Designed-for-together, in-the-room multiplayer. Voice-first creation AND play. “Game night” occasions and licensed TV-show IP (Jeopardy, Wheel of Fortune…) vs anonymous indie mini-games.</p></article>
+      <article class="card card--imp"><h3>Plays worth borrowing</h3><p>Template / remix on-ramp + near-zero time-to-first-game. The live agent thought-stream (builds trust). REAL ownership &amp; export. The clip-to-earn viral loop. A multi-tab live-preview editor.</p></article>
+      <article class="card card--imp"><h3>Risks to avoid</h3><p>Don’t gate first creation so hard it kills activation. Budget per-generation compute early. Don’t ship shallow one-offs — couch play needs depth &amp; replayability. Avoid info-opacity; don’t outsource community to Discord.</p></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer__title">Competitive Analysis — Tesana</p>
+    <p class="footer__meta">Prepared by Paper Lee · June 2026 · for the Weekend / Foundry game-generation platform.</p>
+    <p class="footer__links">
+      <a href="../">← All comp analyses</a>
+      <span>·</span>
+      <a href="https://www.figma.com/board/QFfTuIiUQlZmPU6tD0SqIo/Foundry---Comp-Analysis?node-id=76-30" target="_blank" rel="noopener">Source FigJam board ↗</a>
+      <span>·</span>
+      <a href="https://tesana.ai" target="_blank" rel="noopener">tesana.ai ↗</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" aria-label="Close">✕</button>
+  <img src="" alt="" class="lightbox__img" />
+</div>
+
+<script src="../assets/js/report.js"></script>
+</body>
+</html>
