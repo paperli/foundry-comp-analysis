@@ -143,9 +143,9 @@ a.tile:hover {
   background: var(--bg-alt);
   border: 1px solid var(--border);
 }
-.tile__mark { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 34px; line-height: 1; }
-.tile__mark--astrocade { color: var(--cyan); }
-.tile__mark--tesana { color: var(--violet); }
+.tile__logo img { width: 44px; height: 44px; object-fit: contain; }
+/* Tesana's mark ships as a black glyph on transparent — flip it white for the dark tile. */
+.tile__logo-img--invert { filter: invert(1) brightness(1.8); }
 
 .tile__name { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
 .tile__desc { color: var(--muted); font-size: 15px; line-height: 1.55; margin-bottom: 20px; }
